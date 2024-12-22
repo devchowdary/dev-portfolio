@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography, LinearProgress } from '@mui/material';
+import { Box, Card, CardContent, Typography, LinearProgress, Button } from '@mui/material';
 import { Trophy, Star, Code2 } from 'lucide-react';
 
 const ProfileCard = ({
@@ -11,6 +11,7 @@ const ProfileCard = ({
   contestRating,
   achievements,
   logo,
+  profileUrl, // Added profile URL prop
 }) => {
   const progress = (problemsSolved / totalProblems) * 100;
 
@@ -20,9 +21,11 @@ const ProfileCard = ({
         height: '100%',
         background: 'rgba(255, 255, 255, 0.05)',
         backdropFilter: 'blur(10px)',
-        transition: 'transform 0.3s ease-in-out',
+        transition: 'transform 0.3s ease-in-out, border 0.3s ease-in-out',
+        border: '2px solid transparent',
         '&:hover': {
           transform: 'translateY(-5px)',
+          border: '2px solid #ff4081', // Highlight border effect
         },
       }}
     >
@@ -111,6 +114,27 @@ const ProfileCard = ({
               {achievement}
             </Typography>
           ))}
+        </Box>
+
+        {/* View Profile Button */}
+        <Box sx={{ mt: 3 }}>
+          <Button
+            variant="contained"
+            color="primary"
+            href={profileUrl} // Redirect to the respective profile page
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              background: 'linear-gradient(45deg, #9c27b0, #ff4081)',
+              color: '#fff',
+              fontWeight: 600,
+              '&:hover': {
+                background: 'linear-gradient(45deg, #ff4081, #ff9100)',
+              },
+            }}
+          >
+            View Profile
+          </Button>
         </Box>
       </CardContent>
     </Card>

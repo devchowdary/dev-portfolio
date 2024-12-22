@@ -1,8 +1,12 @@
   import React from 'react';
   import { Box, Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
   import { ExternalLink, Github } from 'lucide-react';
+  import { Person, Group } from '@mui/icons-material';
+
 
   const ProjectCard = ({ title,status,teamStatus, description, image, technologies, liveUrl, githubUrl }) => {
+    const statusColor = status === 'ongoing' ? 'yellow' : 'green';
+
     return (
       <Card
         sx={{
@@ -45,14 +49,27 @@
           alt={title}
         />
         <CardContent sx={{ p: 3 }}>
-          <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
-            {title}
-          </Typography>
-          <Typography variant="h6" component="h6" sx={{ mb: 2, fontWeight: 500 }}>
-            {status}
-          </Typography>
+        <Typography 
+          variant="body2" 
+          sx={{ mt: 2, color: 'white' }} // Always white
+        >
+          <b style={{fontSize:'18px'}}>Project Status: </b> 
+          {status === 'ongoing' ? (
+            <span style={{ color: 'yellow',fontSize:'14px',fontFamily:'cursive' }}>Ongoing</span> // Yellow for ongoing
+          ) : (
+            <span style={{ color: 'green',fontSize:'18px',fontFamily:'inherit' }}>Completed</span> // Green for completed
+          )}
+        </Typography>
           <Typography variant="h6" component="h6" sx={{ mb: 2, fontWeight: 400 }}>
-            {teamStatus }
+          {teamStatus === 'solo' ? (
+            <>
+              <Person sx={{ mr: 1 }} /> Solo
+            </>
+          ) : (
+            <>
+              <Group sx={{ mr: 1 }} /> Team
+            </>
+          )}
           </Typography>
           <Typography variant="body2" sx={{ mb: 2, opacity: 0.8 }}>
             {description}
@@ -84,7 +101,7 @@
                 textTransform: 'none',
               }}
             >
-              Live Demo
+              View Project
             </Button>
             <Button
               variant="outlined"

@@ -16,9 +16,8 @@ const CodingHeader = () => {
       >
         Coding Profiles
       </Typography>
-      <Typography variant="h6" sx={{ opacity: 0.8, maxWidth: 800, mx: 'auto' }}>
-        Track record of problem-solving and competitive programming achievements
-      </Typography>
+      
+      <label><b>Note:-</b>The Following is not Real time data to Know More About My profiles Please <u><b style={{color:'red'}}>Click on View Profile</b>.</u></label>
     </Box>
   );
 }

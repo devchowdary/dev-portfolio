@@ -17,6 +17,7 @@ const CodingProfiles = () => {
         '55 Days Coding Streak',
       ],
       logo: 'https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png',
+      profileUrl:'https://leetcode.com/u/devendraprasad/'
     },
     {
       platform: 'CodeChef',
@@ -32,6 +33,7 @@ const CodingProfiles = () => {
         'Global Rank 1 in Challenge',
       ],
       logo: 'https://cdn.codechef.com/images/cc-logo.svg',
+      profileUrl:'https://www.codechef.com/users/devchowdary'
     },
   ];
 
