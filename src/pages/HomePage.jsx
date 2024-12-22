@@ -84,15 +84,15 @@ const HomePage = () => {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              I'm Dev Chowdary,
+              I'm Devendra Prasad Madala,
             </Box>{' '}
-            <Box component="span" sx={{ color: 'white' }}>
-              Full Stack developer based in India.
+            <Box  sx={{ color: 'white' }}>
+             Software Developer
             </Box>
           </Typography>
 
           <Typography variant="h6" sx={{ maxWidth: 800, opacity: 0.8 }}>
-          A passionate Full Stack Developer with 2 years of hands-on experience in creating innovative and scalable solutions for diverse projects.
+          A passionate Software Developer with 2 years of hands-on experience in creating innovative and scalable solutions for diverse projects.
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>

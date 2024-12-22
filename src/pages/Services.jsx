@@ -15,15 +15,22 @@ const frontendTech = [
 const backendTech = [
   { name: 'Spring Boot', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-KwiTSpZNkGcWfQUKS35cIOPo8xRvj4PjRw&s' },
   { name: 'JSP', logo: 'https://javaflock.com/images/blog/jsp.png' },
-  { name: 'Servlets', logo: 'https://cdn.hostadvice.com/2023/04/final-what-is-a-java-servlet-a-comprehensive-guide-hostadvice-0.jpeg' },
   { name: 'Java', logo: 'https://i.pinimg.com/736x/a1/61/50/a161501cdf14eaba81addec865efbade.jpg' },
   { name: 'REST APIs', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDhF8zRAJnMSeC5f-tnNHXlLZlZcjXEEi9og&s' },
+  {name: 'nodeJs', logo:'https://www.mindrops.com/images/nodejs-image.webp'}
 ];
 
 const databaseTech = [
   { name: 'MySQL', logo: 'https://logolook.net/wp-content/uploads/2024/01/MySQL-Logo.png' },
   { name: 'MongoDB', logo: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-2.svg' },
   { name: 'PostgreSQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg' },
+];
+
+const programmingLanguages = [
+  { name: 'C', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png' },
+  { name: 'C++', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZG7739eWowrkBSXjNg2B6dKYtNozCVlC6NQ&shttps://cdn.worldvectorlogo.com/logos/mongodb-icon-2.svg' },
+  { name: 'JAVA', logo: 'https://www.svgrepo.com/show/303388/java-4-logo.svg' },
+  {name: 'python', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9KYoFpX9v-HF45IjK17OC4jhT19I55y0Fw&s'}
 ];
 
 const Services = () => {
@@ -40,9 +47,11 @@ const Services = () => {
         <ServicesHeader />
 
         <Box sx={{ mb: 8 }}>
+          <TechnologyStack title="Programming Languages" technologies={programmingLanguages} />
           <TechnologyStack title="Frontend Technologies" technologies={frontendTech} />
           <TechnologyStack title="Backend Technologies" technologies={backendTech} />
           <TechnologyStack title="Database Technologies" technologies={databaseTech} />
+          {/* <TechnologyStack title="Programming Languages" technologies={programmingLanguages} /> */}
         </Box>
 
         <ServicesGrid />
