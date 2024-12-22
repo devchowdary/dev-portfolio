@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Coding from './pages/Coding';
 import AboutMe from './pages/AboutMe';
+import Certifications from './pages/Certifications';
 
 
 const theme = createTheme({
@@ -29,6 +30,7 @@ function App() {
       <Services/>
       <Projects/>
       <Coding/>
+      <Certifications/>
       <AboutMe/>
       <Box
         sx={{

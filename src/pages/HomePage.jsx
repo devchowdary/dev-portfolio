@@ -38,19 +38,41 @@ const HomePage = () => {
             gap: 4,
           }}
         >
-        <Box
-          component="img"
-          src={devendra}
-          sx={{
-            width: 250,
-            height: 250,
+       <Box
+        component="img"
+        src={devendra}
+        sx={{
+          width: 250,
+          height: 250,
+          borderRadius: '50%',
+          mb: 2,
+          position: 'relative',
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+          boxShadow: '0px 4px 20px rgba(255, 64, 129, 0.5)', // Add shadow
+          '&:hover': {
+            transform: 'scale(1.1)', // Zoom in on hover
+            boxShadow: '0px 8px 30px rgba(255, 64, 129, 0.8)', // Glow effect
+          },
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
             borderRadius: '50%',
-            mb: 2,
-          }}
-          alt="Profile"
-          draggable="false" // Disable image dragging
-          onContextMenu={(e) => e.preventDefault()} // Disable right-click context menu for saving
-        />
+            border: '2px solid transparent',
+            background: 'linear-gradient(45deg, #9c27b0, #ff4081, #ff9100)',
+            zIndex: -1,
+            transform: 'scale(1.2)', // Slightly larger background
+            transition: 'opacity 0.3s ease',
+            opacity: 0.6, // Semi-transparent glow
+          },
+        }}
+        alt="Profile"
+        draggable="false"
+        onContextMenu={(e) => e.preventDefault()} // Disable right-click
+      />
 
 
           <Typography variant="h2" component="h1" sx={{ fontWeight: 'bold' }}>
