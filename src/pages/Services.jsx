@@ -17,7 +17,7 @@ const backendTech = [
   { name: 'JSP', logo: 'https://javaflock.com/images/blog/jsp.png' },
   { name: 'Java', logo: 'https://i.pinimg.com/736x/a1/61/50/a161501cdf14eaba81addec865efbade.jpg' },
   { name: 'REST APIs', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDhF8zRAJnMSeC5f-tnNHXlLZlZcjXEEi9og&s' },
-  {name: 'nodeJs', logo:'https://www.mindrops.com/images/nodejs-image.webp'}
+ 
 ];
 
 const databaseTech = [
@@ -51,7 +51,6 @@ const Services = () => {
           <TechnologyStack title="Frontend Technologies" technologies={frontendTech} />
           <TechnologyStack title="Backend Technologies" technologies={backendTech} />
           <TechnologyStack title="Database Technologies" technologies={databaseTech} />
-          {/* <TechnologyStack title="Programming Languages" technologies={programmingLanguages} /> */}
         </Box>
 
         <ServicesGrid />

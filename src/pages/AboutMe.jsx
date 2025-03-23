@@ -225,7 +225,7 @@ const AboutMe = () => {
               >
                 Duration
               </TableCell>
-              <TableCell
+              {/* <TableCell
                 sx={{
                   fontWeight: 'bold',
                   color: 'white',
@@ -234,7 +234,7 @@ const AboutMe = () => {
                 }}
               >
                 Percentage/CGPA
-              </TableCell>
+              </TableCell> */}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -246,7 +246,7 @@ const AboutMe = () => {
                 Cybersecurity and Blockchain Technology (DLA)
               </TableCell>
               <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>2022 - 2026</TableCell>
-              <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>9.4</TableCell>
+              {/* <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>9.4</TableCell> */}
             </TableRow>
             {/* Intermediate Row */}
             <TableRow sx={{ '&:nth-of-type(even)': { backgroundColor: 'rgba(255, 255, 255, 0.1)' } }}>
@@ -254,7 +254,7 @@ const AboutMe = () => {
               <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>Intermediate</TableCell>
               <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>MPC</TableCell>
               <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>2020 - 2022</TableCell>
-              <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>70%</TableCell>
+              {/* <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>70%</TableCell> */}
             </TableRow>
             {/* SSC Row */}
             <TableRow sx={{ '&:nth-of-type(even)': { backgroundColor: 'rgba(255, 255, 255, 0.1)' } }}>
@@ -262,7 +262,7 @@ const AboutMe = () => {
               <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>SSC</TableCell>
               <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>Secondary School</TableCell>
               <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>2019 - 2020</TableCell>
-              <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>9.3</TableCell>
+              {/* <TableCell sx={{ py: 1.5, border: '1px solid rgba(255, 255, 255, 0.2)' }}>9.3</TableCell> */}
             </TableRow>
           </TableBody>
         </Table>

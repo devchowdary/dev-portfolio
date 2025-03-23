@@ -6,7 +6,7 @@ import fintech from '../images/fintech.jpg';
 
 const certifications = [
   {
-    title: 'Red Hat Certified Enterprise Application Developer',
+    title: 'Red Hat Certified EX-183',
     provider: 'Redhat',
     year: '2024',
     image: redhat,
@@ -21,8 +21,8 @@ const certifications = [
   },
   {
     title: 'Blockchain Essentials',
-    provider: 'IBM',
-    year: '2021',
+    provider: 'Fintech',
+    year: '2024',
     image: fintech,
     link: 'https://defi-portal.com/certificate-verification',
   },
@@ -30,7 +30,7 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <Box sx={{ py: 8, px: 2 }}>
+    <Box sx={{ py: 1, px: 2 }}>
       <Typography
         variant="h3"
         component="h2"
@@ -86,10 +86,9 @@ const Certifications = () => {
   }}
 >
 
-       
             <CardMedia
               component="img"
-              height="300"
+              height="200"
               image={cert.image}
               alt={cert.title}
               sx={{

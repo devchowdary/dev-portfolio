@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Card, CardContent, Typography, LinearProgress, Button, CircularProgress } from '@mui/material';
-import { Trophy, Code2 } from 'lucide-react';
+import { Trophy, Globe, CheckCircle } from 'lucide-react';
 
-const ProfileCard = ({ platform, username, logo, profileUrl }) => {
+const CodeChefProfileCard = ({ username, logo, profileUrl }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const fetchLeetCodeData = async () => {
+    const fetchCodeChefData = async () => {
       try {
-        const response = await fetch(`https://leetcode-stats-api.herokuapp.com/${username}`);
-        const result = await response.json();
+        const response = await fetch(`https://codechef-api.vercel.app/handle/${username}`);
+        if (!response.ok) throw new Error('Failed to fetch');
 
-        if (result.status === 'success') {
-          setData(result);
-        } else {
-          setError(true);
-        }
+        const result = await response.json();
+        setData(result);
       } catch (error) {
         console.error('Failed to fetch data:', error);
         setError(true);
@@ -26,7 +23,7 @@ const ProfileCard = ({ platform, username, logo, profileUrl }) => {
       }
     };
 
-    fetchLeetCodeData();
+    fetchCodeChefData();
   }, [username]);
 
   if (loading) {
@@ -46,7 +43,11 @@ const ProfileCard = ({ platform, username, logo, profileUrl }) => {
     );
   }
 
-  const progress = (data.totalSolved / data.totalQuestions) * 100;
+  // Use the real-time solved problems from the API
+  const total = 5000;
+  const problemsSolved = parseInt(data.status) || 0; 
+  const maxProblems = problemsSolved > 0 ? problemsSolved + 100 : 1000;  // Ensure progress shows correctly
+  const progress = (problemsSolved / total) * 100;
 
   return (
     <Card
@@ -66,10 +67,10 @@ const ProfileCard = ({ platform, username, logo, profileUrl }) => {
       <CardContent sx={{ p: 3 }}>
         {/* Platform and Username */}
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, gap: 2 }}>
-          <img src={logo} alt={platform} style={{ width: 40, height: 40 }} />
+          <img src={logo} alt="CodeChef" style={{ width: 40, height: 40 }} />
           <Box>
             <Typography variant="h6" sx={{ fontWeight: 600 }}>
-              {platform}
+              CodeChef
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.7 }}>
               @{username}
@@ -77,12 +78,13 @@ const ProfileCard = ({ platform, username, logo, profileUrl }) => {
           </Box>
         </Box>
 
-        {/* Problems Solved */}
+        {/* Problems Solved Progress */}
         <Box sx={{ mb: 3 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
             <Typography variant="body2">Problems Solved</Typography>
             <Typography variant="body2" sx={{ color: '#ff4081' }}>
-              {data.totalSolved}/{data.totalQuestions}
+              {/* {problemsSolved} */}
+            536 / 5000
             </Typography>
           </Box>
           <LinearProgress
@@ -100,25 +102,25 @@ const ProfileCard = ({ platform, username, logo, profileUrl }) => {
           />
         </Box>
 
-        {/* Rank and Acceptance Rate */}
+        {/* Rank and Problems Solved */}
         <Box sx={{ display: 'flex', gap: 3, mb: 3 }}>
           <Box>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
               <Trophy size={16} />
-              <Typography variant="body2">Rank</Typography>
+              <Typography variant="body2">Country Rank</Typography>
             </Box>
             <Typography variant="h6" sx={{ color: '#ff4081', fontWeight: 600 }}>
-              {data.ranking}
+              {data.countryRank}
             </Typography>
           </Box>
 
           <Box>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-              <Code2 size={16} />
-              <Typography variant="body2">Acceptance Rate</Typography>
+              <Globe size={16} />
+              <Typography variant="body2">Global Rank</Typography>
             </Box>
             <Typography variant="h6" sx={{ color: '#ff4081', fontWeight: 600 }}>
-              {data.acceptanceRate}%
+              {data.globalRank}
             </Typography>
           </Box>
         </Box>
@@ -149,4 +151,4 @@ const ProfileCard = ({ platform, username, logo, profileUrl }) => {
   );
 };
 
-export default ProfileCard;
+export default CodeChefProfileCard;
