@@ -8,6 +8,7 @@ import AboutMe from './pages/AboutMe';
 import Certifications from './pages/Certifications';
 import { useState, useEffect } from 'react';
 
+
 const theme = createTheme({
   typography: {
     fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
@@ -27,7 +28,7 @@ function App() {
   useEffect(() => {
     const storedCount = localStorage.getItem('visitorCount');
     const newCount = storedCount ? parseInt(storedCount, 10) + 1 : 1;
-    localStorage.setItem('visitorCount', newCount);
+    localStorage.setItem('visitorCount', newCount + 100);
     setVisitorCount(newCount);
   }, []);
 
@@ -59,6 +60,7 @@ function App() {
       <Box id="aboutme">
         <AboutMe />
       </Box>
+      
 
       <Box
         sx={{

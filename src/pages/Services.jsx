@@ -24,6 +24,7 @@ const databaseTech = [
   { name: 'MySQL', logo: 'https://logolook.net/wp-content/uploads/2024/01/MySQL-Logo.png' },
   { name: 'MongoDB', logo: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-2.svg' },
   { name: 'PostgreSQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg' },
+  { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
 ];
 
 const programmingLanguages = [

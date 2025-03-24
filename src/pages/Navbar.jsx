@@ -3,6 +3,7 @@ import { AppBar, Box, Button, Container, Toolbar, Typography, IconButton, Menu, 
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import title from "../images/title.png"
 
 const Navbar = () => {
   const pages = ['Home', 'Services', 'Projects', 'Achievements', 'About Me'];
@@ -30,19 +31,22 @@ const Navbar = () => {
     <AppBar position="relative" sx={{ background: 'transparent', boxShadow: 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            sx={{
-              mr: 2,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-            DevendraPrasad
-          </Typography>
+        <img
+          src={title} 
+          alt="DevendraPrasad Logo"
+          style={{
+            width: '100px',        
+            height: 'auto',
+            marginRight: '10px',    
+            transition: 'transform 0.3s ease-in-out',
+            cursor: 'pointer',
+            '&:hover': {
+              transform: 'scale(1.1)',  
+            },
+            borderRadius:'10px'
+          }}
+        />
+
 
           {isMobile ? (
             <>

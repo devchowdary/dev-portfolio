@@ -14,7 +14,7 @@ const ServicesHeader = () => {
           WebkitTextFillColor: 'transparent',
         }}
       >
-        Software Development Services
+       Skills & Tools
       </Typography>
       <Typography variant="h6" sx={{ opacity: 0.8, maxWidth: 800, mx: 'auto' }}>
         Delivering end-to-end solutions with modern technologies and best practices

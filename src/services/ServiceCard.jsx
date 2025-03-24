@@ -3,6 +3,8 @@ import { Card, CardContent, Typography, Box } from '@mui/material';
 
 const ServiceCard = ({ title, description, Icon }) => {
   return (
+    <>
+   
     <Card 
       sx={{ 
         height: '100%',
@@ -14,6 +16,7 @@ const ServiceCard = ({ title, description, Icon }) => {
         }
       }}
     >
+      
       <CardContent sx={{ p: 4 }}>
         <Box sx={{ mb: 2, color: '#ff4081' }}>
           <Icon size={40} />
@@ -26,6 +29,7 @@ const ServiceCard = ({ title, description, Icon }) => {
         </Typography>
       </CardContent>
     </Card>
+    </>
   );
 };
 

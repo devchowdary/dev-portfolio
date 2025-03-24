@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid,Typography } from '@mui/material';
 import ServiceCard from './ServiceCard';
 import { Code2, Database, Layout, Server, Smartphone, Globe } from 'lucide-react';
 
@@ -33,6 +33,23 @@ const ServicesGrid = () => {
   ];
 
   return (
+
+    <>
+    <Typography 
+        variant="h3"
+        component="h1"
+        sx={{
+          textAlign: 'center',
+          mb: 4,
+          fontWeight: 'bold',
+          // mb: 2,
+          background: 'linear-gradient(45deg, #9c27b0, #ff4081, #ff9100)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+        }}
+      >
+       Services
+      </Typography>
     <Grid container spacing={4}>
       {services.map((service) => (
         <Grid item xs={12} sm={6} md={4} key={service.title}>
@@ -40,6 +57,7 @@ const ServicesGrid = () => {
         </Grid>
       ))}
     </Grid>
+    </>
   );
 };
 

@@ -66,10 +66,10 @@ const HomePage = () => {
             component="img"
             src={devendra}
             sx={{
-              width: 280,
-              height: 280,
+              width: 220,
+              height: 220,
               borderRadius: '50%',
-              mb: 2,
+              mb: 1,
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               boxShadow: '0px 4px 20px rgba(255, 64, 129, 0.5)', // Add shadow
               '&:hover': {
