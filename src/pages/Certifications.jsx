@@ -1,29 +1,26 @@
 import React from 'react';
 import { Box, Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
-import redhat from '../images/redhat.jpg';
-import salesforce from '../images/salesforce.jpg';
-import fintech from '../images/fintech.jpg';
 
 const certifications = [
   {
     title: 'Red Hat Certified EX-183',
     provider: 'Redhat',
     year: '2024',
-    image: redhat,
+    image: "https://cdn.thenewstack.io/media/2024/11/c57d7e8e-redhat-1024x683.png",
     link: 'https://www.credly.com/badges/77e7ea6f-793a-4f33-a8e1-d9261188a5f4/public_url',
   },
   {
     title: 'Certified AI Associate',
     provider: 'SalesForce',
     year: '2024',
-    image: salesforce,
+    image: "https://images.ctfassets.net/nan8gu4ivyzc/73qWvrPT1QNqTpaNCgzF5A/2090bb8bbace25ed99b9b669e73ea837/salesforce-cover.png",
     link: 'https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=Yqy28SZfxdMNYvhLqqweTNc8yTCzx8iIHRivXJXcoL1CJfwsttZJ+qYS02nFzKvT',
   },
   {
     title: 'Blockchain Essentials',
     provider: 'Fintech',
     year: '2024',
-    image: fintech,
+    image: "https://media.licdn.com/dms/image/v2/C511BAQEpEbgJOpoR4g/company-background_10000/company-background_10000/0/1584215567681/fintech_council_cover?e=2147483647&v=beta&t=lmmt3GM25TAyfVAUq1worwh80hziu__gAS1a9XCVoK4",
     link: 'https://defi-portal.com/certificate-verification',
   },
 ];
@@ -54,37 +51,37 @@ const Certifications = () => {
       >
         {certifications.map((cert, index) => (
         <Card
-  key={index}
-  sx={{
-    height: '100%',
-    background: 'rgba(255, 255, 255, 0.05)',
-    position: 'relative',
-    overflow: 'hidden',
-    transition: 'all 0.3s ease-in-out',
-    '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      borderRadius: '4px',
-      padding: '2px',
-      background: 'linear-gradient(45deg, #9c27b0, #ff4081, #ff9100)',
-      WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-      WebkitMaskComposite: 'xor',
-      maskComposite: 'exclude',
-      opacity: 0,
-      transition: 'opacity 0.3s ease-in-out',
-    },
-    '&:hover': {
-      transform: 'translateY(-5px)',
-      '&::before': {
-        opacity: 1,
-      },
-    },
-  }}
->
+          key={index}
+          sx={{
+            height: '100%',
+            background: 'rgba(255, 255, 255, 0.05)',
+            position: 'relative',
+            overflow: 'hidden',
+            transition: 'all 0.3s ease-in-out',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              borderRadius: '4px',
+              padding: '2px',
+              background: 'linear-gradient(45deg, #9c27b0, #ff4081, #ff9100)',
+              WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+              WebkitMaskComposite: 'xor',
+              maskComposite: 'exclude',
+              opacity: 0,
+              transition: 'opacity 0.3s ease-in-out',
+            },
+            '&:hover': {
+              transform: 'translateY(-5px)',
+              '&::before': {
+                opacity: 1,
+              },
+            },
+          }}
+        >
 
             <CardMedia
               component="img"

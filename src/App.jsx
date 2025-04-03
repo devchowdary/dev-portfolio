@@ -53,7 +53,7 @@ function App() {
         <Coding />
       </Box>
 
-      <Box id="achievements">
+      <Box id="certifications">
         <Certifications />
       </Box>
 

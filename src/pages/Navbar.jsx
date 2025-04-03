@@ -6,7 +6,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import title from "../images/title.png"
 
 const Navbar = () => {
-  const pages = ['Home', 'Services', 'Projects', 'Achievements', 'About Me'];
+  const pages = ['Home', 'Services', 'Projects', 'Certifications', 'About Me'];
   const [anchorEl, setAnchorEl] = useState(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
